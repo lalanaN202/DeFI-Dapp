@@ -1,0 +1,24 @@
+pragma solidity ^0.4.24;
+
+contract LalanaToken {
+    address owner;
+    mapping (address => uint256) public balances;
+
+    constructor () public {
+        owner = msg.sender;
+        balances[owner] = 50000;
+    }
+
+    function transfer(uint amount, address recipient) public {
+        require(balances[msg.sender] >= amount);
+        require(balances[msg.sender] - amount <= balances[msg.sender]);
+        require(balances[msg.sender] + amount >= balances[recipient]);
+
+        balances[msg.sender] -= amount;
+        balances[recipient] += amount;
+    }
+    
+    function getBalance() public view returns(uint256 balance) {
+        return balances[msg.sender];
+    }
+}
