@@ -2,6 +2,8 @@
 
 Day-3 Blockchain project
 
+REFER TO CODES FILE FOR SMART CONTRACT CODE
+
 Create a capstone project: Build your own Defi Dapp
 
 create a basic Defi Dapp in 1 minute using the link given below
